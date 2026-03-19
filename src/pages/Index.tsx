@@ -35,7 +35,7 @@ const SectionBadge = ({
   label: string;
   accent: string;
 }) => (
-  <div className="flex items-center gap-2 mb-4">
+  <div className="flex items-center gap-2 mb-2.5">
     <div
       className="w-8 h-8 rounded-full flex items-center justify-center"
       style={{ backgroundColor: accent }}
@@ -60,8 +60,8 @@ const TechniqueBlock = ({
   children: React.ReactNode;
   accent: string;
 }) => (
-  <div className="mb-5">
-    <div className="flex items-start gap-2 mb-2">
+  <div className="mb-3">
+    <div className="flex items-start gap-2 mb-1.5">
       <div
         className="w-1 rounded-full mt-1 shrink-0"
         style={{ backgroundColor: accent, height: "auto", minHeight: "40px" }}
@@ -100,7 +100,7 @@ const Panel = ({
 }) => (
   <div
     className={`relative flex flex-col h-full ${className}`}
-    style={{ backgroundColor: bg, padding: "32px 26px 24px 26px", ...style }}
+    style={{ backgroundColor: bg, padding: "22px 20px 18px 20px", ...style }}
   >
     {children}
   </div>
@@ -205,7 +205,7 @@ export default function Index() {
               accent={sections.mind.accent}
             />
             <h2
-              className="text-[17px] font-light mb-4 text-slate-800 leading-tight"
+              className="text-[17px] font-light mb-2.5 text-slate-800 leading-tight"
               style={{ fontFamily: "'Cormorant', serif" }}
             >
               Когнитивные
@@ -250,7 +250,7 @@ export default function Index() {
               accent={sections.body.accent}
             />
             <h2
-              className="text-[17px] font-light mb-4 text-slate-800 leading-tight"
+              className="text-[17px] font-light mb-2.5 text-slate-800 leading-tight"
               style={{ fontFamily: "'Cormorant', serif" }}
             >
               Телесные
@@ -335,7 +335,7 @@ export default function Index() {
               accent={sections.breath.accent}
             />
             <h2
-              className="text-[17px] font-light mb-4 text-slate-800 leading-tight"
+              className="text-[17px] font-light mb-2.5 text-slate-800 leading-tight"
               style={{ fontFamily: "'Cormorant', serif" }}
             >
               Дыхательные
