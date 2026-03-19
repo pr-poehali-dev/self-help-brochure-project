@@ -109,7 +109,7 @@ const Panel = ({
 export default function Index() {
   return (
     <div
-      className="min-h-screen flex flex-col items-center justify-center py-10 px-4"
+      className="print-area min-h-screen flex flex-col items-center justify-center py-10 px-4"
       style={{ backgroundColor: "#F5F0EB" }}
     >
       <p
@@ -457,19 +457,43 @@ export default function Index() {
         <div className="text-center" style={{ width: "272px" }}>Панель 6 (задняя обложка) →</div>
       </div>
 
-      {/* Инструкция по сгибу */}
+      {/* Инструкция по сгибу + кнопка печати */}
       <div
         className="flex items-center gap-6 px-8 py-4 rounded-xl"
         style={{ backgroundColor: "#EDE8E3", maxWidth: "816px", width: "100%" }}
       >
         <Icon name="FoldVertical" size={18} className="text-slate-400 shrink-0" />
         <p
-          className="text-[11px] text-slate-500 leading-relaxed"
+          className="text-[11px] text-slate-500 leading-relaxed flex-1"
           style={{ fontFamily: "'Golos Text', sans-serif" }}
         >
           <strong>Как сложить:</strong> Распечатайте обе стороны на одном листе А4 (двусторонняя печать). Сложите по направляющим: сначала загните правую панель назад (обложка), затем левую вперёд — буклет готов.
         </p>
+        <button
+          onClick={() => window.print()}
+          className="flex items-center gap-2 px-5 py-2.5 rounded-lg shrink-0 transition-opacity hover:opacity-80"
+          style={{
+            backgroundColor: "#2D3A35",
+            color: "#fff",
+            fontFamily: "'Golos Text', sans-serif",
+            fontSize: "12px",
+            fontWeight: 500,
+            letterSpacing: "0.05em",
+          }}
+        >
+          <Icon name="Printer" size={14} className="text-white" />
+          Распечатать
+        </button>
       </div>
+
+      <style>{`
+        @media print {
+          body * { visibility: hidden; }
+          .print-area, .print-area * { visibility: visible; }
+          .print-area { position: fixed; top: 0; left: 0; width: 100%; }
+          @page { size: A4 landscape; margin: 0; }
+        }
+      `}</style>
     </div>
   );
 }
