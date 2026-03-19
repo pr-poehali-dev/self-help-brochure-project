@@ -488,10 +488,9 @@ export default function Index() {
 
       <style>{`
         @media print {
-          body * { visibility: hidden; }
-          .print-area, .print-area * { visibility: visible; }
-          .print-area { position: fixed; top: 0; left: 0; width: 100%; }
-          @page { size: A4 landscape; margin: 0; }
+          @page { size: A4 landscape; margin: 10mm; }
+          body { background: white !important; }
+          button { display: none !important; }
         }
       `}</style>
     </div>
