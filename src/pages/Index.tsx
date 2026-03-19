@@ -100,7 +100,7 @@ const Panel = ({
 }) => (
   <div
     className={`relative flex flex-col h-full ${className}`}
-    style={{ backgroundColor: bg, padding: "28px 22px", ...style }}
+    style={{ backgroundColor: bg, padding: "32px 26px 24px 26px", ...style }}
   >
     {children}
   </div>
@@ -159,7 +159,7 @@ export default function Index() {
               >
                 Аптечка
                 <br />
-                <em>самопомощи</em>
+                <em>саморегуляции</em>
                 <br />
                 для учителя
               </h1>
@@ -442,7 +442,7 @@ export default function Index() {
               className="text-[8px] text-white/20 text-center mt-auto"
               style={{ fontFamily: "'Golos Text', sans-serif", letterSpacing: "0.15em" }}
             >
-              АПТЕЧКА САМОПОМОЩИ · УЧИТЕЛЬ
+              АПТЕЧКА САМОРЕГУЛЯЦИИ · УЧИТЕЛЬ
             </div>
           </Panel>
         </div>
